@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高見医院 | 地域密着型クリニック</title>
+  <meta name="description" content="高見医院は地域の皆様の健康を守るため、予防医療から専門的な治療まで幅広く対応しています。">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="min-h-screen bg-white">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-content">
+        <h1 class="site-title">医療法人 社団 高見医院</h1>
+        <div class="contact-info">
+          <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span class="phone-number">0858-36-2011</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ナビゲーション -->
+    <nav class="navigation">
+      <ul>
+        <li><a href="#" class="nav-link">トップページ</a></li>
+        <li><a href="/test/medical.html" class="nav-link">診療案内</a></li>
+        <li><a href="/test/about.html" class="nav-link">医院紹介</a></li>
+        <li><a href="#" class="nav-link">在宅診療</a></li>
+        <li><a href="#" class="nav-link">お問い合わせ</a></li>
+      </ul>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+      <!-- メインビジュアル -->
+      <div class="main-visual">
+        <img src="/test/images/takami-clinic-fv.png" alt="高見医院の外観" class="main-visual-bg">
+        <div class="main-visual-content">
+          <div class="catchphrase-container-new">
+            <div class="catchphrase-line">
+              <span class="catchphrase-text-new">患者様の健康を第一に考える</span>
+            </div>
+            <div class="catchphrase-line">
+              <span class="catchphrase-text-new">地域密着型クリニック</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- モバイル表示時の診療時間ボタン -->
+        <button class="clinic-hours-toggle" id="hoursToggle" aria-expanded="false"
+          aria-controls="clinic-hours-container">
+          <span>診療時間</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toggle-icon">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+
+        <!-- 診療時間 -->
+        <div id="clinic-hours-container" class="clinic-hours hide">
+          <h3 class="clinic-hours-title">診療時間</h3>
+          <table class="clinic-hours-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th>土</th>
+                <th>日</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8:30〜12:00</td>
+                <td>●</td>
+                <td>●</td>
+                <td>●</td>
+                <td>●</td>
+                <td>●</td>
+                <td>●</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>15:30〜18:00</td>
+                <td>●</td>
+                <td>●</td>
+                <td>-</td>
+                <td>●</td>
+                <td>●</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="clinic-hours-note">※水曜午後・土曜午後・日曜・祝祭日は休診</p>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>SCROLL</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 重要なお知らせ -->
+      <div class="important-notice">
+        <div class="notice-icon">!</div>
+        <p>
+          <span class="notice-label">【重要】</span>
+          <a href="#" class="notice-link">ゴールデンウィーク休診のお知らせ（4/29〜5/5）</a>
+        </p>
+      </div>
+
+      <!-- アクションボタン -->
+      <div class="action-buttons">
+        <a href="#" class="btn btn-primary">
+          <span class="btn-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </span>
+          <span class="btn-text">お問い合わせ</span>
+        </a>
+      </div>
+
+      <!-- お知らせ -->
+      <section class="section news-section">
+        <div class="section-inner">
+            <h2 class="section-title">お知らせ</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <div class="news-meta">
+                        <span class="news-date">2025/03/15</span>
+                        <span class="news-category news-category-red">休診情報</span>
+                    </div>
+                    <a href="news.html#news-06" class="news-link">お知らせが入ります。</a>
+                </div>
+                <div class="news-item">
+                    <div class="news-meta">
+                        <span class="news-date">2025/03/10</span>
+                        <span class="news-category news-category-blue">お知らせ</span>
+                    </div>
+                    <a href="news.html#news-05" class="news-link">お知らせが入ります。</a>
+                </div>
+                <div class="news-item">
+                    <div class="news-meta">
+                        <span class="news-date">2025/03/05</span>
+                        <span class="news-category news-category-yellow">重要</span>
+                    </div>
+                    <a href="news.html#news-04" class="news-link">お知らせが入ります。</a>
+                </div>
+                <div class="news-item">
+                    <div class="news-meta">
+                        <span class="news-date">2025/03/01</span>
+                        <span class="news-category news-category-blue">お知らせ</span>
+                    </div>
+                    <a href="news.html#news-03" class="news-link">お知らせが入ります。</a>
+                </div>
+                <div class="news-item">
+                    <div class="news-meta">
+                        <span class="news-date">2025/02/25</span>
+                        <span class="news-category news-category-green">イベント</span>
+                    </div>
+                    <a href="news.html#news-02" class="news-link">お知らせが入ります。</a>
+                </div>
+                <div class="news-more">
+                    <a href="news.html" class="link-arrow">
+                        <span>お知らせ一覧</span>
+                        <span class="arrow-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+      <!-- 診療案内 -->
+      <section class="section services-section">
+        <div class="section-inner">
+          <h2 class="section-title">診療案内</h2>
+          <div class="services-container">
+            <div class="services-intro">
+              <p>高見医院では、内科・呼吸器科を中心に、地域の皆様の健康をサポートしています。また、通院が困難な方のための在宅診療も行っております。</p>
+            </div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-header">
+                  <div class="service-icon">
+                    <div class="icon-circle internal-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 class="service-title">内科</h3>
+                </div>
+                <div class="service-content">
+                  <p class="service-description">風邪、発熱、腹痛などの一般的な症状から、生活習慣病まで幅広く対応しています。健康診断や予防接種なども行っております。</p>
+                  <div class="service-examples">
+                    <span class="service-example">風邪・発熱</span>
+                    <span class="service-example">胃腸症状</span>
+                    <span class="service-example">生活習慣病</span>
+                    <span class="service-example">健康診断</span>
+                  </div>
+                  <div class="service-footer">
+                    <a href="#" class="service-link">詳しく見る</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <div class="service-header">
+                  <div class="service-icon">
+                    <div class="icon-circle respiratory-icon">
+                      <img
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%82%BA%20%282%29%201-hsPniNqBgQ6wENAXIPmegNH3e70Nvk.png"
+                        alt="呼吸器科アイコン" style="width: 32px; height: 32px;">
+                    </div>
+                  </div>
+                  <h3 class="service-title">呼吸器科</h3>
+                </div>
+                <div class="service-content">
+                  <p class="service-description">
+                    咳、痰、息切れなどの呼吸器症状に対応しています。喘息、COPD、気管支炎、肺炎などの診断・治療を行います。また睡眠時無呼吸の検査も実施しております。</p>
+                  <div class="service-examples">
+                    <span class="service-example">咳・痰</span>
+                    <span class="service-example">息切れ</span>
+                    <span class="service-example">喘息</span>
+                    <span class="service-example">気管支炎</span>
+                  </div>
+                  <div class="service-footer">
+                    <a href="#" class="service-link">詳しく見る</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <div class="service-header">
+                  <div class="service-icon">
+                    <div class="icon-circle homecare-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 class="service-title">在宅診療</h3>
+                </div>
+                <div class="service-content">
+                  <p class="service-description">通院が困難な方のご自宅へ医師が訪問し、診療を行います。慢性疾患の管理から緊急時の対応まで、安心の医療を提供します。</p>
+                  <div class="service-examples">
+                    <span class="service-example">定期訪問</span>
+                    <span class="service-example">緊急往診</span>
+                    <span class="service-example">在宅処置</span>
+                    <span class="service-example">終末期ケア</span>
+                  </div>
+                  <div class="service-footer">
+                    <a href="#" class="service-link">詳しく見る</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-buttons">
+              <a href="#" class="btn btn-primary">診療時間・休診日</a>
+              <a href="#" class="btn btn-outline">初診の方へ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 医院紹介 -->
+      <section class="section about-section">
+        <div class="section-inner">
+          <h2 class="section-title">医院紹介</h2>
+          <div class="about-content">
+
+            <div class="about-text">
+              <h3 class="about-heading">地域医療に貢献して30年</h3>
+              <p>高見医院は、鳥取県東伯郡北栄町で30年以上にわたり地域医療に貢献してきました。内科、呼吸器科を中心に、幅広い年齢層の患者様に質の高い医療サービスを提供しています。</p>
+              <p>また、在宅診療にも力を入れており、通院が困難な方々のご自宅へ医師が訪問し、診療を行うサービスも提供しています。患者様一人ひとりに寄り添った、きめ細やかな医療を心がけております。</p>
+              <a href="#" class="btn btn-primary">詳しく見る</a>
+            </div>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon doctor-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <h3 class="feature-title">医師紹介</h3>
+              <a href="#" class="feature-link">詳細を見る</a>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon facility-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">院内設備</h3>
+              <a href="#" class="feature-link">詳細を見る</a>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon access-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="feature-title">アクセス</h3>
+              <a href="#" class="feature-link">詳細を見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 在宅診療 -->
+      <section class="homecare-section">
+        <div class="section-inner">
+          <h2 class="section-title">在宅診療</h2>
+          <div class="homecare-card">
+            <div class="homecare-layout">
+              <div class="homecare-content-area">
+                <h3 class="homecare-subtitle">ご自宅で安心の医療サービス</h3>
+                <p class="homecare-description">
+                  高見医院では、通院が困難な患者様のために訪問診療サービスを提供しています。ご自宅で医師による診察を受けることができ、定期的な健康管理から慢性疾患の治療まで幅広く対応いたします。
+                </p>
+                <ul class="homecare-features">
+                  <li class="homecare-feature-item">
+                    <span class="homecare-checkmark">✓</span><span>定期的な訪問診療</span>
+                  </li>
+                  <li class="homecare-feature-item">
+                    <span class="homecare-checkmark">✓</span><span>24時間対応の緊急往診</span>
+                  </li>
+                  <li class="homecare-feature-item">
+                    <span class="homecare-checkmark">✓</span><span>在宅での医療処置</span>
+                  </li>
+                </ul>
+                <a href="#" class="homecare-link">
+                  <span>詳しくはこちら</span>
+                  <span class="homecare-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="homecare-image-area">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%9C%A8%E5%AE%85%E8%A8%BA%E7%99%82%E3%81%AE%E6%A7%98%E5%AD%90-3XEUOEPwM7K8DUelh2wlXnGuQolHLn.png"
+                  alt="在宅診療のイメージ - 家の模型と聴診器" class="homecare-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- お問い合わせセクション -->
+      <section class="contact-section">
+        <div class="container">
+          <h2 class="section-title">お問い合わせ</h2>
+          <div class="contact-container">
+            <div class="contact-grid">
+              <!-- 電話でのお問い合わせ -->
+              <div>
+                <h3 class="contact-subtitle">お電話でのお問い合わせ</h3>
+                <div class="contact-phone-number">
+                  <svg class="phone-icon-large" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                  <span class="phone-large">0858-36-2011</span>
+                </div>
+                <div class="contact-note">
+                  <p>診療時間内にお電話ください。<br>※お電話が混み合っている場合がございます。あらかじめご了承ください。</p>
+                </div>
+                <h4 class="contact-hours-title">診療時間</h4>
+                <div class="table-container">
+                  <table class="contact-hours-table">
+                    <thead>
+                      <tr class="table-header">
+                        <th></th>
+                        <th>月</th>
+                        <th>火</th>
+                        <th>水</th>
+                        <th>木</th>
+                        <th>金</th>
+                        <th>土</th>
+                        <th>日</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>8:30〜12:00</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                      <tr>
+                        <td>15:30〜18:00</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">●</td>
+                        <td class="text-center">-</td>
+                        <td class="text-center">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="contact-hours-note">※水曜午後・土曜午後・日曜・祝祭日は休診</p>
+              </div>
+
+              <!-- FAXでのお問い合わせ -->
+              <div>
+                <h3 class="contact-subtitle">FAXでのお問い合わせ</h3>
+                <div class="contact-phone-number">
+                  <svg class="phone-icon-large" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                  </svg>
+                  <span class="phone-large">0858-36-2038</span>
+                </div>
+                <h4 class="contact-hours-title">よくあるご質問</h4>
+                <div class="faq-container">
+                  <div class="faq-item">
+                    <button class="faq-question" data-faq="0">
+                      <span>初診の際に必要なものは何ですか？</span>
+                      <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </button>
+                    <div class="faq-answer" data-answer="0">
+                      <p>健康保険証、お薬手帳（お持ちの方）、紹介状（他院からの紹介がある場合）をお持ちください。</p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question" data-faq="1">
+                      <span>保険証の取り扱いについて</span>
+                      <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </button>
+                    <div class="faq-answer" data-answer="1">
+                      <p>各種健康保険を取り扱っております。保険証は毎月初回の受診時に必ずお持ちください。</p>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <button class="faq-question" data-faq="2">
+                      <span>予約は必要ですか？</span>
+                      <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </button>
+                    <div class="faq-answer" data-answer="2">
+                      <p>初診の方や検査をご希望の方は事前にお電話いただくとスムーズです。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- アクセス -->
+      <section class="access-section">
+        <div class="container">
+          <h2 class="section-title">アクセス</h2>
+          <div class="access-container">
+            <div class="access-grid">
+              <!-- 左側：医院の外観写真 -->
+              <div class="access-image">
+                <img src="/test/images/takami-clinic-exterior.png" alt="高見医院の外観" class="clinic-exterior">
+              </div>
+
+              <!-- 右側：医院情報 -->
+              <div class="access-info">
+                <div>
+                  <h3 class="access-title">医療法人 社団 高見医院</h3>
+                </div>
+
+                <!-- 住所 -->
+                <div class="access-detail">
+                  <div class="access-icon">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <span>〒689-2102 鳥取県東伯郡北栄町国坂720</span>
+                </div>
+
+                <!-- 電話番号 -->
+                <div class="access-detail">
+                  <div class="access-icon">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                  </div>
+                  <span>0858-36-2011</span>
+                </div>
+
+                <!-- 診療時間 -->
+                <div class="access-detail">
+                  <div class="access-icon">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span>8:30～12:00 / 15:30～18:00</span>
+                    <p class="access-note">※水曜午後・土曜午後・日曜・祝祭日は休診</p>
+                  </div>
+                </div>
+
+                <!-- 交通アクセス -->
+                <div class="access-transport">
+                  <h4 class="access-transport-title">交通アクセス</h4>
+                  <ul class="access-transport-list">
+                    <li>
+                      <span class="bullet"></span>
+                      <span>JR山陰本線「倉吉駅」より車で10分</span>
+                    </li>
+                    <li>
+                      <span class="bullet"></span>
+                      <span>国道9号線沿い、「鳥取中部ふるさと広域連合」近く</span>
+                    </li>
+                    <li>
+                      <span class="bullet"></span>
+                      <span>駐車場：20台完備</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 詳しいアクセス情報ボタン -->
+                <div class="access-more">
+                  <a href="#" class="access-link">
+                    <span>詳しいアクセス情報</span>
+                    <div class="access-arrow">
+                      <svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- 左側：医院情報 -->
+          <div class="footer-info">
+            <div>
+              <h2 class="footer-title">医療法人 社団 高見医院</h2>
+              <p class="footer-subtitle">Takami Medical Clinic</p>
+            </div>
+
+            <div class="footer-detail">
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>〒689-2102 鳥取県東伯郡北栄町国坂720</span>
+            </div>
+
+            <div class="footer-detail">
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>0858-36-2011</span>
+            </div>
+
+            <div class="footer-detail">
+              <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div>
+                <p>8:30～12:00 / 15:30～18:00</p>
+                <p class="footer-note">※水曜午後・土曜午後・日曜・祝祭日は休診</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右側：地図 -->
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d843.3241055508533!2d133.82321359507728!3d35.47972218132322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3555df1b70949355%3A0xf55eee6b5d0d5a40!2z44CSNjg5LTIxMDIg6bOl5Y-W55yM5p2x5Lyv6YOh5YyX5qCE55S65Zu95Z2C77yX77yS77yQ!5e0!3m2!1sja!2sjp!4v1751264948155!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- 区切り線 -->
+        <hr class="footer-divider">
+
+        <!-- フッターナビゲーション -->
+        <div class="footer-nav">
+          <div class="footer-nav-section">
+            <h3 class="footer-nav-title">サイトマップ</h3>
+            <ul class="footer-nav-list">
+              <li><a href="#" class="footer-nav-link">トップページ</a></li>
+              <li><a href="#" class="footer-nav-link">診療案内</a></li>
+              <li><a href="#" class="footer-nav-link">医院紹介</a></li>
+              <li><a href="#" class="footer-nav-link">アクセス</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-section">
+            <h3 class="footer-nav-title">診療案内</h3>
+            <ul class="footer-nav-list">
+              <li><a href="#" class="footer-nav-link">内科</a></li>
+              <li><a href="#" class="footer-nav-link">呼吸器科</a></li>
+              <li><a href="#" class="footer-nav-link">在宅診療</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-section">
+            <h3 class="footer-nav-title">お知らせ</h3>
+            <ul class="footer-nav-list">
+              <li><a href="#" class="footer-nav-link">お知らせ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- コピーライト -->
+        <div class="footer-copyright">
+          <p>© 2025 高見医院 All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- スクロールトップボタン -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="ページトップへ戻る">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+  <script src="script.js"></script>
+</body>
+
+</html>

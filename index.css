@@ -1,0 +1,1582 @@
+/* ベーススタイル */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #1f2937;
+  line-height: 1.5;
+  background-color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ヘッダー */
+.header {
+  background-color: white;
+  border-bottom: 1px solid #e0e8f0;
+  padding: 1rem 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0070c9;
+  margin: 0;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.phone-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  color: #0070c9;
+}
+
+.phone-number {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* ナビゲーション */
+.navigation {
+  background-color: #0070c9;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation li {
+  margin: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 1rem 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.navigation a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: white;
+}
+
+/* メインビジュアル */
+.main-visual {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main-visual-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.main-visual-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+/* キャッチフレーズ */
+.catchphrase-container-new {
+  position: absolute;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 3;
+}
+
+.catchphrase-text-new {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #1e40af;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+  line-height: 1.4;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+/* 診療時間ボタン */
+.clinic-hours-toggle {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #1e40af;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.clinic-hours-toggle:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* 診療時間 */
+.clinic-hours {
+  position: absolute;
+  bottom: 6rem;
+  right: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+  z-index: 3;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.clinic-hours.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.clinic-hours.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.clinic-hours-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clinic-hours-table {
+  width: 100%;
+  font-size: 0.85rem;
+  border-collapse: collapse;
+  margin-bottom: 0.75rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.clinic-hours-table th,
+.clinic-hours-table td {
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+  border: 1px solid #e0e8f0;
+}
+
+.clinic-hours-table th {
+  background-color: #f0f7ff;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.clinic-hours-note {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: center;
+}
+
+/* スクロールインジケーター */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  animation: bounce 2s infinite;
+  z-index: 3;
+}
+
+.scroll-indicator svg {
+  margin-top: 0.5rem;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 重要なお知らせ */
+.important-notice {
+  background-color: #fff8e6;
+  border-top: 1px solid #ffe0b2;
+  border-bottom: 1px solid #ffe0b2;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notice-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #ff9500;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.notice-label {
+  font-weight: 600;
+  color: #e67700;
+  margin-right: 0.5rem;
+}
+
+.notice-link {
+  color: #e67700;
+  text-decoration: underline;
+}
+
+.notice-link:hover {
+  color: #d9480f;
+}
+
+/* アクションボタン */
+.action-buttons {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #f8fafc;
+}
+
+/* ボタン */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  color: white;
+  border: 1px solid #4a90e2;
+}
+
+.btn-primary:hover {
+  background-color: #2c5aa0;
+  border-color: #2c5aa0;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #4a90e2;
+  border: 1px solid #4a90e2;
+}
+
+.btn-outline:hover {
+  background-color: #f0f7ff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* セクション共通 */
+.section {
+  padding: 5rem 0;
+  border-bottom: 1px solid #f0f7ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.section:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* セクションタイトル */
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2c5aa0;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5rem;
+  height: 3px;
+  background-color: #4a90e2;
+  border-radius: 3px;
+}
+
+/* お知らせ */
+.news-section {
+  background-color: white;
+}
+
+.news-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.news-item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e0e8f0;
+  transition: all 0.2s ease;
+}
+
+.news-item:hover {
+  background-color: #f0f7ff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  border-radius: 0.5rem;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.news-date {
+  font-size: 0.875rem;
+  color: #666;
+  margin-right: 0.75rem;
+}
+
+.news-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.news-category-red {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.news-category-blue {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.news-category-yellow {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.news-category-green {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.news-link {
+  color: #1f2937;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: block;
+  text-decoration: none;
+}
+
+.news-link:hover {
+  color: #4a90e2;
+}
+
+.news-more {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  color: #4a90e2;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.link-arrow:hover {
+  color: #2c5aa0;
+  background-color: #f0f7ff;
+}
+
+.arrow-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+  background-color: #4a90e2;
+  border-radius: 50%;
+  color: white;
+}
+
+/* 診療案内 */
+.services-section {
+  background-color: #f8fafc;
+  position: relative;
+}
+
+.services-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.services-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e8f0;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-color: #b3d7ff;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f0f7ff;
+  border-bottom: 1px solid #f0f7ff;
+}
+
+.service-icon {
+  margin-right: 1.25rem;
+  flex-shrink: 0;
+}
+
+.icon-circle {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.internal-icon,
+.respiratory-icon,
+.homecare-icon {
+  background-color: #b3d7ff;
+  position: relative;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c5aa0;
+  margin: 0;
+}
+
+.service-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-description {
+  color: #1f2937;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-example {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background-color: #f0f7ff;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  color: #2c5aa0;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.service-example:hover {
+  background-color: #b3d7ff;
+  transform: translateY(-2px);
+}
+
+.service-footer {
+  margin-top: auto;
+  border-top: 1px solid #f0f7ff;
+  padding-top: 1rem;
+}
+
+.service-link {
+  color: #4a90e2;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.service-link:hover {
+  color: #2c5aa0;
+}
+
+.service-buttons {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* 医院紹介 */
+.about-section {
+  background-color: white;
+  padding: 4rem 0;
+}
+
+.about-content {
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c5aa0;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.about-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 2px;
+  background-color: #4a90e2;
+}
+
+.about-text p {
+  color: #1f2937;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 1px solid #f0f7ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #b3d7ff;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background-color: #f0f7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.doctor-icon,
+.facility-icon,
+.access-icon {
+  color: #4a90e2;
+}
+
+.feature-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2c5aa0;
+  margin-bottom: 0.75rem;
+}
+
+.feature-desc {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.feature-link {
+  display: inline-flex;
+  align-items: center;
+  color: #4a90e2;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.feature-link:hover {
+  color: #2c5aa0;
+}
+
+.feature-link::after {
+  content: "→";
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.feature-link:hover::after {
+  transform: translateX(2px);
+}
+
+/* 在宅診療 */
+.homecare-section {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.homecare-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid #e0e8f0;
+}
+
+.homecare-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.homecare-content-area {
+  padding: 2.5rem;
+}
+
+.homecare-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.homecare-subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 3px;
+  background-color: #4a90e2;
+  border-radius: 3px;
+}
+
+.homecare-description {
+  color: #1f2937;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.homecare-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.homecare-feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.homecare-checkmark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  color: #4a90e2;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.homecare-link {
+  display: inline-flex;
+  align-items: center;
+  color: #4a90e2;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0;
+}
+
+.homecare-link:hover {
+  color: #2c5aa0;
+}
+
+.homecare-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 0.5rem;
+  background-color: #4a90e2;
+  border-radius: 50%;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.homecare-link:hover .homecare-arrow {
+  transform: translateX(4px);
+}
+
+.homecare-image-area {
+  background-color: #b8d8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.homecare-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* お問い合わせ */
+.contact-section {
+  padding: 4rem 0;
+  background-color: #f8fafc;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid #e0e8f0;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4a90e2;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #4a90e2;
+  display: inline-block;
+}
+
+.contact-phone-number {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.phone-icon-large {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #4a90e2;
+  color: white;
+  padding: 0.5rem;
+  margin-right: 0.75rem;
+}
+
+.phone-large {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.contact-note {
+  background-color: #f0f7ff;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  margin: 1rem 0;
+}
+
+.contact-note p {
+  color: #1f2937;
+  margin: 0;
+}
+
+.contact-hours-title {
+  font-weight: 700;
+  color: #1f2937;
+  margin: 2rem 0 0.75rem 0;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.contact-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.contact-hours-table th,
+.contact-hours-table td {
+  padding: 0.5rem 0.25rem;
+  border: 1px solid #e0e8f0;
+  font-size: 0.875rem;
+}
+
+.table-header {
+  background-color: #f0f7ff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.contact-hours-note {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* FAQ */
+.faq-container {
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  border: 1px solid #e0e8f0;
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+  background-color: #f8fafc;
+}
+
+.faq-question span {
+  color: #4a90e2;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.faq-icon {
+  color: #4a90e2;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 0.75rem 0.75rem 0.75rem;
+}
+
+.faq-answer.show {
+  display: block;
+}
+
+.faq-answer p {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* アクセス */
+.access-section {
+  padding: 2.5rem 0;
+  background-color: white;
+}
+
+.access-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.access-image {
+  order: 2;
+}
+
+.clinic-exterior {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.access-info {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.access-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0070c9;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0070c9;
+  display: inline-block;
+}
+
+.access-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.access-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #0070c9;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.access-detail span {
+  color: #1f2937;
+  font-size: 1.125rem;
+}
+
+.access-note {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.access-transport {
+  margin-top: 2rem;
+}
+
+.access-transport-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0070c9;
+  margin-bottom: 1rem;
+}
+
+.access-transport-list {
+  list-style: none;
+  padding: 0;
+}
+
+.access-transport-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.bullet {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #0070c9;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.access-more {
+  margin-top: 2rem;
+}
+
+.access-link {
+  display: inline-flex;
+  align-items: center;
+  color: #0070c9;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.access-link:hover {
+  color: #005a9e;
+}
+
+.access-arrow {
+  margin-left: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #0070c9;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.access-link:hover .access-arrow {
+  transform: translateX(4px);
+}
+
+/* フッター */
+.footer {
+  background-color: #0a4b87;
+  color: white;
+  padding: 4rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-subtitle {
+  color: #bfdbfe;
+  margin-top: 0.25rem;
+}
+
+.footer-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.footer-icon {
+  color: #93c5fd;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.footer-note {
+  font-size: 0.75rem;
+  color: #bfdbfe;
+  margin-top: 0.25rem;
+}
+
+.footer-map {
+  width: 100%;
+  height: 16rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.footer-iframe {
+  border-radius: 0.5rem;
+}
+
+.footer-divider {
+  border-color: #1d4ed8;
+  margin: 3rem 0;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+.footer-nav-section h3 {
+  color: #93c5fd;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav-list li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav-link {
+  color: white;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-link:hover {
+  color: #93c5fd;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.875rem;
+  color: #93c5fd;
+}
+
+/* レスポンシブデザイン */
+@media (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .navigation ul {
+    flex-wrap: nowrap;
+  }
+
+  .main-visual {
+    height: 500px;
+  }
+
+  .catchphrase-text-new {
+    font-size: 2rem;
+  }
+
+  .clinic-hours {
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  .clinic-hours-toggle {
+    display: none;
+  }
+
+  .clinic-hours.hide {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .homecare-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .homecare-image-area {
+    order: 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .access-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .access-image {
+    order: 1;
+  }
+
+  .access-info {
+    order: 2;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .header-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 1.25rem;
+  }
+
+  .phone-number {
+    font-size: 1rem;
+  }
+
+  .navigation ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navigation a {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .catchphrase-container-new {
+    left: 1rem;
+  }
+
+  .catchphrase-text-new {
+    font-size: 1.5rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .homecare-content-area {
+    padding: 2rem;
+  }
+
+  .homecare-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .homecare-description {
+    font-size: 0.9rem;
+  }
+
+  .homecare-feature-item {
+    font-size: 0.9rem;
+  }
+
+  .homecare-image-area {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ユーティリティクラス */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 初期は高さゼロで隠す */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* .show クラスでコンテンツの高さ分だけ開く */
+.faq-answer.show {
+  /* 実際の高さに応じて大きめに指定 */
+  max-height: 500px;
+}
+  
+/* アイコン回転用 */
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+.faq-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* 医院紹介セクションの「アクセス」アイコンを丸背景＋サイズ揃え */
+.about-section .features-grid .feature-icon.access-icon {
+  background-color: #f0f7ff;         /* 他と同じ薄い背景色 */
+  width: 4rem;                       /* 他アイコンと同じ大きさ */
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin: 0 auto 1.5rem;            /* 中央寄せ＆下マージン */
+}
+
+/* SVGの大きさと色も揃える */
+.about-section .features-grid .feature-icon.access-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #4a90e2;                    /* 他と同じアイコンカラー */
+}
+
+
+/* ナビゲーション - モバイル表示時の折り返し対応 */
+@media (max-width: 767px) {
+  .navigation ul {
+    flex-wrap: wrap;              /* 複数行に折り返し */
+    justify-content: center;
+    padding: 0.5rem 0;            /* 上下パディング追加 */
+  }
+
+  .navigation li {
+    margin: 0.25rem 0.5rem;       /* 各リンク間の余白 */
+  }
+
+  .navigation a {
+    padding: 0.5rem 1rem;         /* コンパクトに */
+    font-size: 0.9rem;
+    border-bottom: none;          /* 下線なし（省スペース） */
+  }
+}
+
